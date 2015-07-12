@@ -19,7 +19,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -32,6 +32,6 @@ angular
         controller: 'redditListCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: ''
       });
   });

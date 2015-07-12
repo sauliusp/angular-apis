@@ -9,7 +9,7 @@
  */
 angular.module('angularApisApp')
   .controller('redditListCtrl', ['$scope', 'testService', function ($scope, testService) {
-    
+
   	$scope.reddits = testService.success(function (data) {
   		$scope.redditData = data;
       $scope.reddits = $scope.redditData.data.children;

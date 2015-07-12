@@ -21,13 +21,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" data-ng-controller="SharedCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-          <li><a href="#/redditList">Reddit List</a></li>
+          <li data-ng-class="{active: isActive('')}"><a ng-href="#">Home</a></li>
+          <li data-ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+          <li data-ng-class="{active: isActive('/contact')}"><a ng-href="#">Contact</a></li>
+          <li data-ng-class="{active: isActive('/redditList')}"><a href="#/redditList">Reddit List</a></li>
         </ul>
         <h3 class="text-muted">angular-reddit stuff</h3>
       </div>
@@ -76,6 +76,7 @@
         <script src="scripts/app.js"></script>
 
         <!-- controllers: -->
+        <script src="scripts/controllers/shared-controller.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/redditList.js"></script>

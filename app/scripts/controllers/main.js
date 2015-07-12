@@ -9,7 +9,12 @@
  */
 angular.module('angularApisApp')
   .controller('MainCtrl', ['$scope', function ($scope) {
-    
+
+ //  	function HeaderController($scope, $location) { 
+	//     $scope.isActive = function (viewLocation) { 
+	//         return viewLocation === $location.path();
+	//     };
+	// };    
   
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
