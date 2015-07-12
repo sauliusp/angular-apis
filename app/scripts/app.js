@@ -1,3 +1,4 @@
+
 'use strict';
 
 /**
@@ -30,6 +31,10 @@ angular
       .when('/redditList', {
         templateUrl: 'views/redditList.html',
         controller: 'redditListCtrl'
+      })
+      .when('/redditList/item/:id', {
+        templateUrl:'views/redditItem.html',
+        controller: 'ReddititemCtrl'
       })
       .otherwise({
         redirectTo: ''

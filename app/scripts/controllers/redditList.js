@@ -1,3 +1,4 @@
+
 'use strict';
 
 /**
@@ -9,6 +10,7 @@
  */
 angular.module('angularApisApp')
   .controller('redditListCtrl', ['$scope', 'testService', function ($scope, testService) {
+    
 
   	$scope.reddits = testService.success(function (data) {
   		$scope.redditData = data;

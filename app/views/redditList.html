@@ -1,6 +1,7 @@
+
 <div class="row" data-ng-repeat="item in reddits">
 	<div class="col-md-1">{{$index + 1}}</div>
-	<div class="col-md-3">{{ item.data.title }}</div>
+	<a href="#/redditList/item/{{$index}}"><div class="col-md-3">{{ item.data.title }}</div></a>
 	<div class="col-md-2">
 		ups: {{item.data.ups}}
 	</div>
