@@ -1,8 +1,37 @@
+/*margin top/bottom*/
+
+.mt10 {margin-top: 10;};
+.mt15 {margin-top: 15;};
+.mt20 {margin-top: 20;};
+.mt25 {margin-top: 25;};
+.mt30 {margin-top: 30;};
+.mt35 {margin-top: 35;};
+
+
+.mb10 {margin-bottom: 10;};
+.mb15 {margin-bottom: 15;};
+.mb20 {margin-bottom: 20;};
+.mb25 {margin-bottom: 25;};
+.mb30 {margin-bottom: 30;};
+.mb35 {margin-bottom: 35;};
+
+/*padding*/
+
+.pad0 {padding: 0;};
+
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+
 /* Space out content a bit */
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-}
+}  
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
