@@ -1,29 +1,24 @@
 /*margin top/bottom*/
 
-.mt10 {margin-top: 10;};
-.mt15 {margin-top: 15;};
-.mt20 {margin-top: 20;};
-.mt25 {margin-top: 25;};
-.mt30 {margin-top: 30;};
-.mt35 {margin-top: 35;};
+.mt10 {margin-top: 10px;}
+.mt15 {margin-top: 15px;}
+.mt20 {margin-top: 20px;}
+.mt25 {margin-top: 25px;}
+.mt30 {margin-top: 30px;}
+.mt35 {margin-top: 35px;}
 
 
-.mb10 {margin-bottom: 10;};
-.mb15 {margin-bottom: 15;};
-.mb20 {margin-bottom: 20;};
-.mb25 {margin-bottom: 25;};
-.mb30 {margin-bottom: 30;};
-.mb35 {margin-bottom: 35;};
+.mb10 {margin-bottom: 10px;}
+.mb15 {margin-bottom: 15px;}
+.mb20 {margin-bottom: 20px;}
+.mb25 {margin-bottom: 25px;}
+.mb30 {margin-bottom: 30px;}
+.mb35 {margin-bottom: 35px;}
 
 /*padding*/
 
-.pad0 {padding: 0;};
-
-.test {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
+.pad0 {padding: 0;}
+.padLR5 {padding: 0 5px;}
 
 
 /* Space out content a bit */
