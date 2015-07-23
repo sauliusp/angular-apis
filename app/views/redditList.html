@@ -9,14 +9,14 @@
 		</select>
 	</div>
 	<div class="col-md-3 padLR5">
-    	<input type="text" class="form-control" placeholder="search..">
+    	<input type="text" class="form-control" placeholder="type to search.." data-ng-model="query">
 	</div>
 </div>
 
 <div id="test"></div>
 
 
-<div class="row" data-ng-repeat="item in reddits">
+<div class="row" data-ng-repeat="item in reddits|filter:query">
 	<div class="col-md-1">{{$index + 1}}</div>
 	<a href="#/redditList/item/{{$index}}"><div class="col-md-3">{{ item.data.title }}</div></a>
 	<div class="col-md-2">
