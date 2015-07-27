@@ -13,21 +13,23 @@
 	</div>
 </div>
 
-<div id="test"></div>
 
-
-<div class="row" data-ng-repeat="item in reddits|filter:query">
-	<div class="col-md-1">{{$index + 1}}</div>
-	<a href="#/redditList/item/{{$index}}"><div class="col-md-3">{{ item.data.title }}</div></a>
-	<div class="col-md-2">
-		ups: {{item.data.ups}}
+<div infinite-scroll='reddit.nextPage()' infinite-scroll-disabled='reddit.busy' infinite-scroll-distance='1'>
+	<div class="row" data-ng-repeat="item in reddit.items|filter:query">
+		<div class="col-md-1">{{$index + 1}}</div>
+		<a href="#/redditList/item/{{$index}}"><div class="col-md-3">{{ item.data.title }}</div></a>
+		<div class="col-md-2">
+			ups: {{item.data.ups}}
+		</div>
+		<div class="col-md-2">
+			downs: {{item.data.downs}}
+		</div>
+		<!-- <div class="col-md-4">{{ item.data.thumbnail }}</div> -->
+		<a class="col-md-4" href="{{ item.data.url }}">
+			<img data-ng-if="item.data.thumbnail" data-ng-src="{{ item.data.thumbnail }}" alt="">
+			<span data-ng-if="!item.data.thumbnail">jump to reddit</span>
+		</a>
 	</div>
-	<div class="col-md-2">
-		downs: {{item.data.downs}}
-	</div>
-	<!-- <div class="col-md-4">{{ item.data.thumbnail }}</div> -->
-	<a class="col-md-4" href="{{ item.data.url }}">
-		<img data-ng-if="item.data.thumbnail" data-ng-src="{{ item.data.thumbnail }}" alt="">
-		<span data-ng-if="!item.data.thumbnail">jump to reddit</span>
-	</a>
+	<div ng-show='reddit.busy'>Loading data...</div>
 </div>
+

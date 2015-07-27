@@ -9,11 +9,10 @@
  * Controller of the angularApisApp
  */
 angular.module('angularApisApp')
-  .controller('redditListCtrl', ['$scope', 'testService', function ($scope, testService) {
+  .controller('redditListCtrl', ['$scope', 'RedditInfiniteScroll', function ($scope, RedditInfiniteScroll) {
     
 
-  	testService.success(function (data) {
-      	$scope.reddits = data.data.children;
-  	});
+  	$scope.reddit = new RedditInfiniteScroll();
+
 
   }]);
