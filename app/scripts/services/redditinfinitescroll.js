@@ -25,10 +25,10 @@ angular.module('angularApisApp')
           for (var i = 0; i < items.length; i++) {
             this.items.push(items[i].data);
           }
+          // console.log(items);
           this.after = 't3_' + this.items[this.items.length - 1].id;
           this.busy = false;
         }.bind(this));
     };
-
     return Reddit;
   });
