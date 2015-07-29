@@ -22,8 +22,10 @@
 			<img data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}" alt="">
 			<span data-ng-if="!item.thumbnail">jump to reddit</span>
 		</a>
-		<div class="col-md-12" data-ng-show='reddit.busy'>
-			<i class="fa fa-spinner fa-spin"></i>
+	</div>
+	<div class="row mt35 mb35" data-ng-show='reddit.busy'>
+		<div class="col-md-12 text-center">
+			<i class="fa fa-5x fa-spinner fa-spin"></i>
 		</div>
 	</div>
 </div>
