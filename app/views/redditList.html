@@ -22,7 +22,9 @@
 			<img data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}" alt="">
 			<span data-ng-if="!item.thumbnail">jump to reddit</span>
 		</a>
+		<div class="col-md-12" data-ng-show='reddit.busy'>
+			<i class="fa fa-spinner fa-spin"></i>
+		</div>
 	</div>
-	<div ng-show='reddit.busy'>Loading data...</div>
 </div>
 
