@@ -21,7 +21,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('', {
+      .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -38,6 +38,6 @@ angular
         controller: 'ReddititemCtrl'
       })
       .otherwise({
-        redirectTo: ''
+        redirectTo: '/'
       });
   });
