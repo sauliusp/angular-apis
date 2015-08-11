@@ -1,14 +1,14 @@
 
 <!-- finish this select box - default selected item or simple title -->
 <div class="row mb20">
-	<div class="col-md-3 col-md-offset-6 padLR5">
+	<div class="col-sm-3 col-sm-offset-6 padLR5">
     	<select class="form-control">
 		  <option>sort by</option>
 		  <option>date added</option>
 		  <option>something</option>
 		</select>
 	</div>
-	<div class="col-md-3 padLR5">
+	<div class="col-sm-3 padLR5">
     	<input type="text" class="form-control" placeholder="type to search.." data-ng-model="query">
 	</div>
 </div>
@@ -16,15 +16,19 @@
 
 <div infinite-scroll='reddit.nextPage()' infinite-scroll-disabled='reddit.busy' infinite-scroll-distance='1'>
 	<div class="row mt10 mb10" data-ng-repeat="item in reddit.items|filter:query">
-		<a href="#/redditList/item/{{$index}}"><div class="col-md-9">{{ item.title }}</div></a>
-		<!-- <div class="col-md-4">{{ item.thumbnail }}</div> -->
-		<a class="col-md-3" href="{{ item.url }}">
-			<img data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}" alt="">
-			<span data-ng-if="!item.thumbnail">jump to reddit</span>
-		</a>
+		<div class="col-sm-9">
+			<span class="label label-default pull-left">{{item.created|date:format:timezone}}</span>
+			<a class="pull-left" style="width:100%" href="#/redditList/item/{{$index}}">{{ item.title }}</a>
+		</div>
+			
+		<div class="col-sm-3">
+			<a class="thumbnail" href="{{ item.url }}">
+				<img data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}" alt="thumbnail picture should be here">
+			</a>
+		</div>
 	</div>
 	<div class="row mt35 mb35" data-ng-show='reddit.busy'>
-		<div class="col-md-12 text-center">
+		<div class="col-sm-12 text-center">
 			<i class="fa fa-5x fa-spinner fa-spin"></i>
 		</div>
 	</div>

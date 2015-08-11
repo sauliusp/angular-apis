@@ -22,6 +22,7 @@ angular.module('angularApisApp')
         var url = 'http://api.reddit.com/hot?after=' + this.after + '&jsonp=JSON_CALLBACK';
         $http.jsonp(url).success(function(data) {
           var items = data.data.children;
+          console.log(items);
           for (var i = 0; i < items.length; i++) {
             this.items.push(items[i].data);
           }

@@ -13,6 +13,6 @@ angular.module('angularApisApp')
     
 
   	$scope.reddit = new RedditInfiniteScroll();
-
+  	
 
   }]);
