@@ -26,7 +26,7 @@
     <div class="container" data-ng-controller="SharedCtrl">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li data-ng-class="{active: isActive('')}"><a ng-href="#/">Home</a></li>
+          <li data-ng-class="{active: isActive('/')}"><a ng-href="#/">Home</a></li>
           <li data-ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
           <li data-ng-class="{active: isActive('/contact')}"><a ng-href="#">Contact</a></li>
           <li data-ng-class="{active: isActive('/redditList')}"><a href="#/redditList">Reddit List</a></li>
@@ -88,7 +88,6 @@
         <script src="scripts/controllers/reddititem.js"></script>
 
         <!-- directives: -->
-
 
         <!-- services -->
         <script src="scripts/services/testService.js"></script>

@@ -13,6 +13,6 @@ angular.module('angularApisApp')
 
     $scope.isActive = function (currentScreen) {
     	return currentScreen === $location.path();
-    } 
+    };
 
   }]);

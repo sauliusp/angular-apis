@@ -8,7 +8,7 @@
  * Factory in the angularApisApp.
  */
 angular.module('angularApisApp')
-  .factory('RedditInfiniteScroll', function ($http) {
+  .factory('RedditInfiniteScroll',['$http', function ($http) {
     var Reddit = function() {
         this.items = [];
         this.busy = false;
@@ -31,4 +31,4 @@ angular.module('angularApisApp')
         }.bind(this));
     };
     return Reddit;
-  });
+  }]);
