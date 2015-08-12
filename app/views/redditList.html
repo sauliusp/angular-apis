@@ -17,7 +17,7 @@
 <div infinite-scroll='reddit.nextPage()' infinite-scroll-disabled='reddit.busy' infinite-scroll-distance='1'>
 	<div class="row mt10 mb10" data-ng-repeat="item in reddit.items|filter:query">
 		<div class="col-sm-9">
-			<span class="label label-default pull-left">{{item.created|date:format:timezone}}</span>
+			<span class="label label-default pull-left">submitted on {{item.created_utc * 1000|date : 'short'}}</span>
 			<a class="pull-left" style="width:100%" href="#/redditList/item/{{$index}}">{{ item.title }}</a>
 		</div>
 			

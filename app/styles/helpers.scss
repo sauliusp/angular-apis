@@ -1,0 +1,25 @@
+/*margin top classes from mt5 to mt100*/
+.mt {
+	$mt: 5px;
+	@for $i from 5 through 100 {
+		&#{$i} {
+			margin-top: $mt;
+		}
+		$mt: $mt + 1px; 
+	}
+}
+
+.mb {
+	$mb: 5px;
+	@for $i from 5 through 100 {
+		&#{$i} {
+			margin-bottom: $mb;
+		}
+		$mb: $mb + 1px; 
+	}
+}
+
+/*padding*/
+
+.pad0 {padding: 0;}
+.padLR5 {padding: 0 5px;}
