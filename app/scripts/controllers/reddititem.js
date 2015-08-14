@@ -14,6 +14,7 @@ angular.module('angularApisApp')
  
 	testService.success(function (data) {
 		$scope.item = data.data.children[$routeParams.id];
+		console.log($scope.item);
 	});
   	
 
