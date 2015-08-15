@@ -14,30 +14,36 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'infinite-scroll'
+    'infinite-scroll',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('home');
+    
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        name: "saulius's hub"
       })
-      .when('/about', {
+      .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        name: 'about'
       })
-      .when('/redditList', {
-        templateUrl: 'views/redditList.html',
-        controller: 'redditListCtrl'
+      .state('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html',
+        name: 'contact'
       })
-      .when('/redditList/item/:id', {
-        templateUrl:'views/redditItem.html',
-        controller: 'ReddititemCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
+      .state('reddit-list', {
+        url: '/reddit-list',
+        templateUrl: 'views/reddit-list.html',
+        controller: 'redditListCtrl',
+        name: 'reddit example'
       });
+
   });
