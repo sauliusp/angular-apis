@@ -11,7 +11,6 @@
 angular.module('angularApisApp')
   .controller('redditListCtrl', ['$scope', 'RedditInfiniteScroll', function ($scope, RedditInfiniteScroll) {
     
-
   	$scope.reddit = new RedditInfiniteScroll();
   	
 

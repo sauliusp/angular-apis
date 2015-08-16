@@ -21,29 +21,42 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('/');
     
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'views/main.html',
-        name: "saulius's hub"
+        data: {
+          name: "saulius's hub"
+        }
       })
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
-        name: 'about'
+        data: {
+          name: "about"
+        }
       })
       .state('contact', {
         url: '/contact',
         templateUrl: 'views/contact.html',
-        name: 'contact'
+        data: {
+          name: "contact"
+        }
       })
       .state('reddit-list', {
         url: '/reddit-list',
         templateUrl: 'views/reddit-list.html',
         controller: 'redditListCtrl',
-        name: 'reddit example'
+        data: {
+          name: "reddit example"
+        }
+      })
+      .state('reddit-item', {
+        url: '/reddit-item/:id',
+        templateUrl: 'views/reddit-item.html',
+        controller: 'redditItemCtrl'
       });
 
   });

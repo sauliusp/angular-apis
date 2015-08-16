@@ -9,11 +9,10 @@
  * Controller of the angularApisApp
  */
 angular.module('angularApisApp')
-  .controller('ReddititemCtrl', ['$scope', 'testService', '$routeParams', function ($scope, testService, $routeParams) {
+  .controller('redditItemCtrl', ['$scope', 'testService', '$stateParams', function ($scope, testService, $stateParams) {
 
- 
 	testService.success(function (data) {
-		$scope.item = data.data.children[$routeParams.id];
+		$scope.item = data.data.children[$stateParams.id];
 		console.log($scope.item);
 	});
   	

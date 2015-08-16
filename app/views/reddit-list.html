@@ -21,14 +21,14 @@
 				submitted on {{item.created_utc * 1000|date : 'short'}}
 			</span>
 
-			<a class="pull-left" style="width:100%" href="#/redditList/item/{{$index}}">
+			<a class="pull-left" style="width:100%" data-ui-sref="reddit-item({id: $index})">
 				{{ item.title }}
 			</a>
 		</div>
 			
 		<div class="col-sm-3">
 			<a class="thumbnail" href="{{ item.url }}">
-				<img data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}" alt="thumbnail picture should be here">
+				<img alt="thumbnail picture should be here" data-ng-if="item.thumbnail" data-ng-src="{{ item.thumbnail }}"/>
 			</a>
 		</div>
 	</div>
@@ -38,4 +38,3 @@
 		</div>
 	</div>
 </div>
-

@@ -5,12 +5,12 @@ angular.module('angularApisApp')
     return {
       restrict: 'E',
       replace:true,
-      // scope:{},
       templateUrl: 'views/header-menu.html',
       controller: function ($scope, $state) {
-      	$scope.changeState = function () {
-      		console.log($state);
-      	};
+      	$scope.stateName = null;
+      	$scope.$on('$stateChangeSuccess', function () {
+      		$scope.stateName = $state.current.data.name;
+      	});
       }
       };
     }
